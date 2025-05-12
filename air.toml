@@ -1,0 +1,29 @@
+# air.toml
+
+# Watch these directories (default is current dir)
+[build]
+  # Command to run your app
+  cmd = "go run main.go"
+  # Delay before restart (in ms)
+  delay = 1000
+  # Binary name (optional if using go run)
+  bin = "app"
+  # Watch extensions
+  include_ext = ["go", "tpl", "tmpl", "html"]
+  # Exclude folders like vendor or test
+  exclude_dir = ["vendor", "tmp", "bin", "node_modules"]
+
+[log]
+  # Show timestamps
+  time = true
+  # Show command output
+  color = true
+
+[color]
+  main = "yellow"
+  watcher = "cyan"
+  build = "green"
+  runner = "magenta"
+
+[misc]
+  clean_on_exit = true
